@@ -1,0 +1,23 @@
+body {
+  font-family: arial, helvetic, 'sans-seriff';
+}
+
+.rooms {
+  padding: 25px;
+}
+
+.switch {
+  height: 50px;
+  width: 50px;
+  display: block;
+  border: 2px #555 solid;
+  background-color: #aabbff;
+  border-radius: 15%;
+  transition: background-color 0.25s, border 0.15s;
+  margin-bottom: 20px;
+}
+
+.switch.active {
+  border: 2px #000 solid;
+  background-color: #112266;
+}
