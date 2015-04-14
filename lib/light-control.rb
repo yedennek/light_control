@@ -8,8 +8,8 @@ end
 get "/rooms" do
   content_type :json
   { rooms: [
-    {room: "Office", state: "ON", colour: "#ff0000"},
-    {room: "Porch", state: "OFF" },
-    {room: "Kitchen", state: "ON", colour: "#0066ff"},
+    {id: "room-1", room: "Office", on: true, colour: "#ff0000"},
+    {id: "room-2", room: "Porch", on: false },
+    {id: "room-3", room: "Kitchen", on: true, colour: "#0066ff"},
   ] }.to_json
 end
