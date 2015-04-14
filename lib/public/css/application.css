@@ -11,7 +11,7 @@ body {
   width: 50px;
   display: block;
   border: 2px #555 solid;
-  background-color: #aabbff;
+  background-color: #ffffff;
   border-radius: 15%;
   transition: background-color 0.25s, border 0.15s;
   margin-bottom: 20px;
@@ -20,4 +20,12 @@ body {
 .switch.active {
   border: 2px #000 solid;
   background-color: #112266;
+}
+
+.switch:hover{
+  border-color: #777;
+}
+
+.switch.active:hover{
+  border-color: #555;
 }
