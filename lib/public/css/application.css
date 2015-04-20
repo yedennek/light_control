@@ -19,7 +19,6 @@ body {
 
 .switch.active {
   border: 2px #000 solid;
-  background-color: #112266;
 }
 
 .switch:hover{
