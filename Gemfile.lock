@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/AdamWhittingham/milight.git
+  revision: b5578e357e450d9fb4ceccdaee0f8b1d737ee7b1
+  specs:
+    milight (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,6 +41,7 @@ PLATFORMS
 DEPENDENCIES
   haml
   json
+  milight!
   rspec
   shotgun
   sinatra
