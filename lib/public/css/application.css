@@ -1,5 +1,8 @@
 body {
   font-family: arial, helvetic, 'sans-serif';
+  padding: 25px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 .rooms {
