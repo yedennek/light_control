@@ -1,27 +1,26 @@
 require "sinatra"
 require "json"
 
-rooms = { rooms:
-    [
-      {id: "room-1", room: "Office",  on: true,    colour: "#ff0000"},
-      {id: "room-2", room: "Porch",   on: false,   colour: "#ff66ff"},
-      {id: "room-3", room: "Kitchen", on: true,    colour: "#0066ff"},
-    ]
-  }
-
 get '/' do
   haml :index
 end
 
 get "/rooms" do
   content_type :json
-  rooms.to_json
+  lights = JSON.load File.new(File.dirname(__FILE__) + "/db/room_state.json")
+  lights.to_json
 end
 
 post "/rooms" do
-  request.body.rewind
-  rooms[:rooms].each do |room|
-    room[:on] = params[:on] if room[:room] == params[:room]
+  lights = JSON.load File.new(File.dirname(__FILE__) + "/db/room_state.json")
+
+  lights["rooms"].each do |room|
+    on = params[:on] == "true" ? true : false
+    room["on"] = on if room["room"] == params[:room]
   end
-  rooms.to_json
+
+  File.open(File.dirname(__FILE__) + "/db/room_state.json", "w") do |f|
+    f.write(lights.to_json)
+  end
+  lights.to_json
 end
