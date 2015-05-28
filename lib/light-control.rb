@@ -18,8 +18,10 @@ get "/rooms" do
   rooms.to_json
 end
 
-patch "/rooms" do
+post "/rooms" do
   request.body.rewind
-  data = JSON.parse request.body.read
-  rooms = { rooms: data }
+  rooms[:rooms].each do |room|
+    room[:on] = params[:on] if room[:room] == params[:room]
+  end
+  rooms.to_json
 end
