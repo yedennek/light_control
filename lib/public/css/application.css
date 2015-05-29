@@ -2,7 +2,7 @@ body {
   font-family: arial, helvetic, 'sans-serif';
   padding: 25px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ddd;
 }
 
 .rooms {
@@ -18,6 +18,23 @@ body {
   border-radius: 15%;
   transition: background-color 0.25s, border 0.15s;
   margin-bottom: 20px;
+}
+
+.master {
+  height: 50px;
+  width: 50px;
+  display: block;
+  border: 2px #555 solid;
+  background-color: #ffffff;
+  border-radius: 15%;
+  transition: background-color 0.25s, border 0.15s;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.master.active {
+  border: 2px #000 solid;
+  background-color: #777;
 }
 
 .switch.active {
