@@ -1,14 +1,40 @@
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(../fonts/arvo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 body {
-  font-family: arial, helvetic, 'sans-serif';
+  font-family: 'Arvo', 'sans-serif';
+  color: #ddd;
   padding: 25px;
   margin: 0 auto;
-  background-color: #ddd;
+  background-color: #333;
+  background:url(../images/background.png);
 }
 
 .rooms {
-  padding: 25px;
+  padding: 0px;
 }
 
+.master-switch,
+.room {
+  background-color: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 3px;
+  margin: 5px;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+}
+
+.switch-label {
+  margin: 0 0 5px;
+}
+
+.master,
 .switch {
   height: 50px;
   width: 50px;
@@ -18,18 +44,7 @@ body {
   border-radius: 15%;
   transition: background-color 0.25s, border 0.15s;
   margin-bottom: 20px;
-}
-
-.master {
-  height: 50px;
-  width: 50px;
-  display: block;
-  border: 2px #555 solid;
-  background-color: #ffffff;
-  border-radius: 15%;
-  transition: background-color 0.25s, border 0.15s;
-  margin-bottom: 20px;
-  text-align: center;
+  margin: auto;
 }
 
 .master.active {
