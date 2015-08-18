@@ -1,0 +1,21 @@
+{
+  "name": "light-control",
+  "version": "1.0.0",
+  "devDependencies": {
+    "jest-cli": "^0.4.17",
+    "react": "*",
+    "react-tools": "*"
+  },
+  "scripts": {
+    "test": "node ./node_modules/jest-cli/bin/jest.js"
+  },
+  "jest": {
+    "scriptPreprocessor": "./preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "./node_modules/react"
+    ],
+    "testFileExtensions": [
+      "js"
+    ]
+  }
+}
