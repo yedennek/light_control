@@ -1,0 +1,14 @@
+- controller:
+    ip: '192.168.0.10'
+    - room: 'Adam'
+      group: 1
+    - room: 'Anna'
+      group: 2
+    - room: 'Landing'
+      group: 3
+    - room: 'Bedroom'
+      group: 4
+- controller:
+    ip: '192.168.0.10'
+    - room: 'Porch'
+      group: 1

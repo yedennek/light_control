@@ -1,5 +1,6 @@
 require "sinatra"
 require "json"
+require "milight"
 
 get '/' do
   haml :index
@@ -13,6 +14,9 @@ end
 
 post "/rooms" do
   lights = JSON.load File.new(File.dirname(__FILE__) + "/db/room_state.json")
+
+  lights_controller = Milight::Controller.new '192.168.0.10'
+  lights_controller.group(1).on
 
   lights["rooms"].each do |room|
     on = params[:on] == "true" ? true : false
